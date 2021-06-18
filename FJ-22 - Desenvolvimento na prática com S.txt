@@ -1,0 +1,83 @@
+FJ-22 - Desenvolvimento na prática com Spring MVC e Testes
+
+leonardo.silva@caelum.com.br
+
+https://www.linkedin.com/in/leonardo-silva-dev/
+
+Jamboard: https://jamboard.google.com/d/1Fp2AkZKhGlLaecXM_owKLYDYBBQRDWjSOKBpfMVDE3M/edit?usp=sharing
+
+https://github.com/
+https://github.com/caelum/fj22-ingressos
+
+Links:
+https://www.sonarqube.org/
+https://www.sonatype.com/products/repository-pro
+https://www.jfrog.com/
+https://junit.org/junit5/
+https://mvnrepository.com/
+https://docs.oracle.com/javase/7/docs/api/java/math/RoundingMode.html
+https://www.omdbapi.com/
+https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html
+
+Exercicios:
+
+1.3 EXERCÍCIO - INICIANDO COM GIT
+1.5 EXERCÍCIO OPCIONAL - CRIANDO UMA CONTA NO GITHUB
+1.7 EXERCÍCIO - FORK E CLONE DO PROJETO
+1.9 EXERCÍCIO - USANDO GERENCIADOR DE DEPENDÊNCIA E BUILD
+1.10 EXERCÍCIO - RODANDO PROJETO NO ECLIPSE COM MAVEN
+2.2 EXERCÍCIO - CRIANDO NOSSAS BRANCHES
+2.4 EXERCÍCIO - DISPONIBILIZANDO FORMULÁRIO PRA CRIAÇÃO DA SESSÃO
+2.6 EXERCÍCIO - SALVANDO A SESSÃO NO SISTEMA
+2.9 EXERCÍCIO - VALIDANDO O HORÁRIO DA SESSÃO QUE SERÁ CADASTRADA
+2.12 EXERCÍCIO - GARANTINDO QUE A VALIDAÇÃO DE HORÁRIOS PARA CADASTRAR UMA SESSÃO ESTÁ CORRETA
+3.2 EXERCICIO - COLOCANDO PRE O NA SALA E FILME
+3.4 EXERCICIO - CRIANDO DESCONTOS E INGRESSO
+3.5 EXERCICIO - TESTANDO UM DESCONTO
+4.2 EXERCICIO - CRIANDO O CATALOGO DE FILMES E TELA DE DETALHES DO FILME COM SESSOES PARA COMPRA
+4.4 EXERCICIO - CONSUMINDO SERVICO PARA DETALHES DO FILME
+5.2 EXERCICIO - CRIANDO LOGICA PARA TELA DE SELECAO DE LUGARES
+5.4 EXERCICIO - IMPLEMENTANDO A SELECAO DE LUGARES, INGRESSOS E TIPO DE INGRESSOS.
+6.2 EXERCICIO - IMPLEMENTANDO A LOGICA PARA A TELA DE COMPRAS
+6.4 EXERCICIO - DESABILITANDO A SELECAO DO LUGAR QUE JA ESTA NO CARRINHO
+6.6 EXERCICIO - IMPLEMENTANDO A TELA DE CHECKOUT
+6.8 EXERCICIOS - IMPLEMENTANDO A COMPRA
+
+####### MySQL Driver
+
+<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.20</version>
+        </dependency>
+
+####### Trocar a porta do Jetty:
+
+Goals: clean package jetty:run -Djetty.port=9999
+
+pom.xml
+
+<plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.0.v20161208</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <httpConnector>
+	                		<port>8090</port>
+                	</httpConnector>
+                </configuration>
+            </plugin>
+
+
+StringBuilder
+
+	StringBuilder builder = new StringBuilder();
+		builder.append("https://omdb-fj22.blablabla.com/movie");
+		builder.append("?title=" + titulo);
+		builder.append("&id=" + 10);
+		builder.append("&id=" + 10);
+		builder.append("&id=" + 10);
+		builder.append("&id=" + 10);
+		
+		String strFinal = builder.toString();
